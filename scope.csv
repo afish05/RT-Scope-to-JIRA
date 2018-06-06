@@ -1,0 +1,38 @@
+COMPANY_NAME,MAX(SP.TPID),Datatype Name,Service Name,MAP_NAME,Router Ext
+AMERIWOOD INDUSTRIES,55DALLAMERIWOOD,Standard RSX | 856 | v7.5.0 | Both - Legacy,FIfromService,standards.rsx.v7.m5.r0.shi.shiRsxWrite,DRE
+AMERIWOOD INDUSTRIES,55DALLAMERIWOOD,Standard RSX | 856 | v7.5.0 | Both - Legacy,FIfromService,standards.rsx.v7.m5.r0.shi.shiRsxWrite,MapExtension
+C and T INTERNATIONAL INC,55DALLCANDTINTE,SWK 856 APP,FIfromService,formats.SWK.v700.sh.shSipWrite,DRE
+C and T INTERNATIONAL INC,55DALLCANDTINTE,SWK 856 APP,FIfromService,formats.SWK.v700.sh.shSipWrite,MapExtension
+DIMPLEX NORTH AMERICA LIMITED,55DALLDIMPLEXNO,SIP 6 Comma-Delimited 856 APP,FIfromService,Formats.sip600.co.sh.shSipWrite,DRE
+DIMPLEX NORTH AMERICA LIMITED,55DALLDIMPLEXNO,SIP 6 Comma-Delimited 856 APP,FIfromService,Formats.sip600.co.sh.shSipWrite,MapExtension
+East End Imports,55DALLEASTENDIM,East End Imports 856 XML,FIfromService,formats.eastEndImports.v700.xml.sh.shSipWrite,DRE
+East End Imports,55DALLEASTENDIM,East End Imports 856 XML,FIfromService,formats.eastEndImports.v700.xml.sh.shSipWrite,DRE
+East End Imports,55DALLEASTENDIM,East End Imports 856 XML,FIfromService,formats.eastEndImports.v700.xml.sh.shSipWrite,DRE
+East End Imports,55DALLEASTENDIM,East End Imports 856 XML,FIfromService,formats.eastEndImports.v700.xml.sh.shSipWrite,MapExtension
+East End Imports,55DALLEASTENDIM,East End Imports 856 XML,FIfromService,formats.eastEndImports.v700.xml.sh.shSipWrite,MapExtension
+East End Imports,55DALLEASTENDIM,East End Imports 856 XML,FIfromService,formats.eastEndImports.v700.xml.sh.shSipWrite,MapExtension
+Flexsteel Industries,55DALLFLEXSTEE1,Flexsteel Industries 856 XML RSX,FIfromService,formats.Flexsteel.SAP.transportationOrderRequest.shipment.fromXML.toRSXv7m7r0.write,DRE
+Flexsteel Industries,55DALLFLEXSTEE1,Flexsteel Industries 856 XML RSX,FIfromService,formats.Flexsteel.SAP.transportationOrderRequest.shipment.fromXML.toRSXv7m7r0.write,MapExtension
+Flexsteel Industries Inc,55DALLFLEXSTEEL,RSX Flexsteel Industries Shipment Flat File APP,FIfromService,formats.FlexSteel.Shipment.fromFlatFile.toRSXv7m6r0XML.write,DRE
+Flexsteel Industries Inc,55DALLFLEXSTEEL,RSX Flexsteel Industries Shipment Flat File APP,FIfromService,formats.FlexSteel.Shipment.fromFlatFile.toRSXv7m6r0XML.write,MapExtension
+Hillsdale Furniture LLC,55DALLHILLSDALE,Hillsdale Furniture 856 APP 2,FIfromService,Formats.hillsdaleFurniture.v700.pi.sh.shSipWrite,DRE
+Hillsdale Furniture LLC,55DALLHILLSDALE,Hillsdale Furniture 856 APP 2,FIfromService,Formats.hillsdaleFurniture.v700.pi.sh.shSipWrite,DRE
+Hillsdale Furniture LLC,55DALLHILLSDALE,Hillsdale Furniture 856 APP 2,FIfromService,Formats.hillsdaleFurniture.v700.pi.sh.shSipWrite,DRE
+Hillsdale Furniture LLC,55DALLHILLSDALE,Hillsdale Furniture 856 APP 2,FIfromService,Formats.hillsdaleFurniture.v700.pi.sh.shSipWrite,MapExtension
+Hillsdale Furniture LLC,55DALLHILLSDALE,Hillsdale Furniture 856 APP 2,FIfromService,Formats.hillsdaleFurniture.v700.pi.sh.shSipWrite,MapExtension
+Hillsdale Furniture LLC,55DALLHILLSDALE,Hillsdale Furniture 856 APP 2,FIfromService,Formats.hillsdaleFurniture.v700.pi.sh.shSipWrite,MapExtension
+Home Meridian International,55DALLHOMEMERID,Home Meridian 856 SAP 7.2 APP,FIfromService,formats.HomeMeridian.AdvanceShipNotice.fromSAP.toRSXv7m2r0.write,DRE
+Home Meridian International,55DALLHOMEMERID,Home Meridian 856 SAP 7.2 APP,FIfromService,formats.HomeMeridian.AdvanceShipNotice.fromSAP.toRSXv7m2r0.write,MapExtension
+L Powell Acquisition Corp,55DALLLPOWELLAC,Linon Home Decor DELVRY07 856 APP,FIfromService,formats.lINON.SAP.delvry07.shipment.fromFixedLength.toRSXv7m6r0.write,DRE
+L Powell Acquisition Corp,55DALLLPOWELLAC,Linon Home Decor DELVRY07 856 APP,FIfromService,formats.lINON.SAP.delvry07.shipment.fromFixedLength.toRSXv7m6r0.write,MapExtension
+Linon Home Decor,55DALLLINONHOME,Linon Home Decor DELVRY07 856 APP,FIfromService,formats.lINON.SAP.delvry07.shipment.fromFixedLength.toRSXv7m6r0.write,DRE
+Linon Home Decor,55DALLLINONHOME,Linon Home Decor DELVRY07 856 APP,FIfromService,formats.lINON.SAP.delvry07.shipment.fromFixedLength.toRSXv7m6r0.write,MapExtension
+QUOIZEL,55DALLQUOIZEL00,Business Systems Integrators 856 APP,FIfromService,formats.businessSystemsIntegrators.v700.xml.sh.advanceShipNotice,DRE
+QUOIZEL,55DALLQUOIZEL00,Business Systems Integrators 856 APP,FIfromService,formats.businessSystemsIntegrators.v700.xml.sh.advanceShipNotice,DRE
+QUOIZEL,55DALLQUOIZEL00,Business Systems Integrators 856 APP,FIfromService,formats.businessSystemsIntegrators.v700.xml.sh.advanceShipNotice,MapExtension
+QUOIZEL,55DALLQUOIZEL00,Business Systems Integrators 856 APP,FIfromService,formats.businessSystemsIntegrators.v700.xml.sh.advanceShipNotice,MapExtension
+Stein World,55DALLSTEINWORL,SWK 856 APP,FIfromService,formats.SWK.v700.sh.shSipWrite,DRE
+Stein World,55DALLSTEINWORL,SWK 856 APP,FIfromService,formats.SWK.v700.sh.shSipWrite,MapExtension
+Uniluv Marketing Inc,55DALLUNILUVMAR,Standard NetSuite ASN > RSX ASN v7.6 (LEGACY SIP),FIfromService,formats.template.shipment.fromNetsuiteCSV.toRSXv7m6r0.write,DRE
+Uniluv Marketing Inc,55DALLUNILUVMAR,Standard NetSuite ASN > RSX ASN v7.6 (LEGACY SIP),FIfromService,formats.template.shipment.fromNetsuiteCSV.toRSXv7m6r0.write,MapExtension
+VENDOR IN SF REPORT ONLY,,,,,
