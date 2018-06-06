@@ -35,4 +35,5 @@ for row in csv_reader:
 
 infile.close()
 outfile.close()
+
 print('\nDONE - Script created JIRA_Import.csv. Please check the accuracy of its contents before uploading to JIRA')
