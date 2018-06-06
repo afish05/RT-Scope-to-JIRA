@@ -8,7 +8,7 @@ print('Welcome to the JIRA RT .csv script! \n\nPlease ensure your input is named
 
 hub = input('Enter DC4 hub company name: ')
 doc = input('Enter the EDI doc type: ')
-rt_task = input('Eneter the master RT ticket number: ')
+rt_task = input('Enter the master RT ticket number: ')
 sch_dt = input('Enter the scheduled install date (MM/DD/YYYY): ')
 owner = input('Enter your email address: ')
 
