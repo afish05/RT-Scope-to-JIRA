@@ -5,7 +5,6 @@
 import sys
 import os
 import csv
-import time
 
 cwd = os.getcwd() #Get the current directory, script will run on input from the same.
 verify = 'N'
@@ -97,7 +96,7 @@ def main():
                     print('\nSUCCESS - Script created '+(outfile.name)+'.\n\nPlease check the accuracy of its contents before uploading to JIRA\n\n')
                     die()
 		
-		#Report failures and do not create an output
+	#Report failures and do not create an output
         except Exception:
             os.remove(outfile.name)
             print('\nFAIL - An Error Occured :(\n')
