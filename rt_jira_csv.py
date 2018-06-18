@@ -94,7 +94,7 @@ def main():
                                         'TPID':(tpid) or 'SALESFORCE'})
 
                     print('\nSUCCESS - Script created '+(outfile.name)+'.\n\nPlease check the accuracy of its contents before uploading to JIRA\n\n')
-                    die()
+            die()
 		
 	#Report failures and do not create an output
         except Exception:
