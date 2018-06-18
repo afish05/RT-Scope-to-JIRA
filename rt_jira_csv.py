@@ -25,7 +25,7 @@ def main():
         os.system("pause")
         sys.exit()
 	
-	#Restart script function
+    #Restart script function
     def restart():
         print('\nRestarting Script\n')
         time.sleep(1)
@@ -82,10 +82,17 @@ def main():
                     #Build the output csv
                     for row in csv_reader:
                         co_name = (row['COMPANY_NAME'])
+                        pr = ''
+                        if '(PR)' in co_name:
+                            co_name = co_name.replace(' (PR)','',).replace('(PR)','')
+                            pr = ' (PR)'
+                        else:
+                            pass
+                
                         tpid = (row[str(csv_reader.fieldnames[1])]) #Second column for TPID. Header differs.
                         csv_writer.writerow({'Type':'Sub-task',
                                         'Parent ID':(rt_task),
-                                        'Summary':(co_name)+' / '+(hub)+' / '+(doc),
+                                        'Summary':(co_name)+' / '+(hub)+' / '+(doc)+(pr),
                                         'Description':'See Summary of Changes',
                                         'Scheduled':(sch_dt),
                                         'Account Name':(co_name),
