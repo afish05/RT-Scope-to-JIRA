@@ -3,26 +3,26 @@
 # This script will output the .csv for creating JIRA sub-tasks using the RM scope .csv as input 
 
 import sys
+import time
 import os
+import re
 import csv
-
-cwd = os.getcwd() #Get the current directory, script will run on input from the same.
-verify = 'N'
 
 print('Welcome to the JIRA RT .csv script! \n\nPlease ensure your input file is located in the same directory as this script\n')
 
 def main():
-    
-    hub = input('Enter DC4 hub company name: ')
-    doc = input('Enter the EDI doc type: ')
-    rt_task = input('Enter the master RT ticket number: ')
-    sch_dt = input('Enter the scheduled install date (MM/DD/YYYY): ')
-    owner = input('Enter your email address: ')
-    filename = input('Enter the file name (with file extension) to run: ')
+
+    cwd = os.getcwd() #Get the current directory, script will run on input from the same.
+    hub = ''
+    doc = ''
+    rt_task = ''
+    sch_dt = ''
+    owner = ''
+    filename = ''
 
     #Exit script function
     def die():
-        os.system("pause")
+        os.system('pause')
         sys.exit()
 	
     #Restart script function
@@ -36,34 +36,52 @@ def main():
         print('.\n')
         main()
 
-    #Restart script for null inputs
-    if hub == '' or doc == '' or rt_task == '' or sch_dt == '' or owner == '' or filename == '':
-        print('\nInput Parameter missing.\n')
-        restart()
+    #Get the inputs, do not allow blank inputs
+    while hub == '':
+        hub = input('Enter DC4 hub company name: ')
 
-	#User verify correct inputs
+    while doc == '':        
+        doc = input('Enter the EDI doc type: ')
+
+    while rt_task == '':        
+        rt_task = input('Enter the master RT ticket number: ')
+
+    while sch_dt == '':
+        sch_dt = input('Enter the scheduled install date (MM/DD/YYYY): ')
+        while not re.match('(0[1-9]|1[0-2])/(0[1-9]|1[0-9]|2[0-9]|3[0-1])/(20[0-9][0-9])',(sch_dt)):
+            print('\n'+(sch_dt)+' is not a valid date. Please enter a valid date in MM/DD/YYYY format\n')
+            sch_dt = input('Enter the scheduled install date (MM/DD/YYYY): ')
+
+    while owner == '':    
+        owner = input('Enter your email address: ')
+
+    while filename == '':
+        filename = input('Enter the file name (with file extension) to run: ')
+
+    # Review and verify inputs
+    print('\n\n'+(hub)+' - DC4 Company Name')
+    print((doc)+' - DocType')
+    print((rt_task)+' - RT-Task')
+    print((sch_dt)+' - Scheduled Date')
+    print((owner)+' - Owner')
+    print((filename)+' - Filename')
+
     verify = input('\nIs the above information correct? (Y/N): ')
     if verify == 'Y' or verify == 'y':
 		
-		#Format the input file name
+	#Format the input file name
         file = (cwd)+'\\'+(filename)
         
-        #Open and read the input file
+        #Open and read the input file, fail for common exceptions
         try:
             with open((file), 'r') as chkfile:
                 chkfile.read()
-
-        #Fail for no file found
         except FileNotFoundError:
             print('\nERROR - Input file '+(filename)+' not found in '+(cwd)+'\n')
             die()
-
-        #Fail non-text binary files
         except UnicodeDecodeError:
             print('\nERROR - Invalid input file. Please ensure that the file is saved in .csv format\n')
             die()
-
-        #Fail other stuff
         except Exception:
             print('\nAn unexpected error occured\n')
             die()
@@ -106,12 +124,11 @@ def main():
 	#Report failures and do not create an output
         except Exception:
             os.remove(outfile.name)
-            print('\nFAIL - An Error Occured :(\n')
+            print('\nFAIL - An Error Occured when reading/writing the CSV. Please try again.\n')
             die()
 
     else:
         restart()
 
-if __name__ == "__main__":
-    main()
+main()
 
