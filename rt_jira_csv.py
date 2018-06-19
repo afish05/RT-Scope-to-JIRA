@@ -28,12 +28,7 @@ def main():
     #Restart script function
     def restart():
         print('\nRestarting Script\n')
-        time.sleep(1)
-        print('.')
-        time.sleep(1)
-        print('.')
-        time.sleep(1)
-        print('.\n')
+        time.sleep(2)
         main()
 
     #Get the inputs, do not allow blank inputs
@@ -83,7 +78,7 @@ def main():
             print('\nERROR - Invalid input file. Please ensure that the file is saved in .csv format\n')
             die()
         except Exception:
-            print('\nAn unexpected error occured reading the input file\n')
+            print('\nAn unexpected error occured\n')
             die()
 
         try:
