@@ -43,7 +43,7 @@ def main():
 
     while sch_dt == '':
         sch_dt = input('Enter the scheduled install date (MM/DD/YYYY): ')
-        while not re.match('(0[1-9]|1[0-2])/(0[1-9]|1[0-9]|2[0-9]|3[0-1])/(20[0-9][0-9])',(sch_dt)):
+        if sch_dt != '' and not re.match('(0[1-9]|1[0-2])/(0[1-9]|1[0-9]|2[0-9]|3[0-1])/(20[0-9][0-9])',(sch_dt)):
             print('\n'+(sch_dt)+' is not a valid date. Please enter a valid date in MM/DD/YYYY format\n')
             sch_dt = input('Enter the scheduled install date (MM/DD/YYYY): ')
 
