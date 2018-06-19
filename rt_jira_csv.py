@@ -53,7 +53,7 @@ def main():
     while filename == '':
         filename = input('Enter the file name (with file extension) to run: ')
 
-    # Review and verify inputs
+    #Review and verify inputs
     print('\n\n'+(hub)+' - DC4 Company Name')
     print((doc)+' - DocType')
     print((rt_task)+' - RT-Task')
@@ -61,7 +61,7 @@ def main():
     print((owner)+' - Owner')
     print((filename)+' - Filename')
 
-    verify = input('\nIs the above information correct? (Y/N): ')
+    verify = input('\nIs the above information correct? (y/n): ')
     if verify == 'Y' or verify == 'y':
 		
 	#Format the input file name
