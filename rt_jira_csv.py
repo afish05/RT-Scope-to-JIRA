@@ -84,7 +84,7 @@ def main():
         try:
             #Create the output file and assign column headers
             with open((cwd)+'\JIRA_Import_'+(rt_task)+'.csv', 'w', newline='') as outfile:
-                out_clmns = ['Type','Issue ID','Parent ID','Summary','Description','Scheduled','Account Name','RM Coordinator','Project Owner','Summary of Changes','TPID']
+                out_clmns = ['Type','Issue ID','Parent ID','Summary','Description','Scheduled','Account Name','RM Coordinator','Project Owner','Summary of Changes','TPID','Bristlecone?']
                 csv_writer = csv.DictWriter(outfile, fieldnames=out_clmns, dialect='excel')
                 csv_writer.writeheader()
 
@@ -96,9 +96,11 @@ def main():
                     for row in csv_reader:
                         co_name = (row['COMPANY_NAME'])
                         pr = ''
+                        bc = 'Yes'
                         if '(PR)' in co_name:
                             co_name = co_name.replace(' (PR)','',).replace('(PR)','')
                             pr = ' (PR)'
+                            bc = 'No'
                         else:
                             pass
                 
@@ -111,7 +113,8 @@ def main():
                                         'Account Name':(co_name),
                                         'RM Coordinator':(owner),
                                         'Project Owner':(owner),
-                                        'TPID':(tpid) or 'SALESFORCE'})
+                                        'TPID':(tpid) or 'SALESFORCE',
+                                        'Bristlecone?':(bc)})
 
                     print('\nSUCCESS - Script created '+(outfile.name)+'.\n\nPlease check the accuracy of its contents before uploading to JIRA\n\n')
             die()
