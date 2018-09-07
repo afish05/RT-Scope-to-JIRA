@@ -89,7 +89,7 @@ def main():
                 csv_writer.writeheader()
 
                 #Read the input file. Skip blank rows
-                with open((file), 'r', encoding='utf-8-sig') as infile:
+                with open((file), 'r') as infile:
                     csv_reader = csv.DictReader((line for line in infile if not line.startswith(',')), dialect='excel')
 
                     #Build the output csv
