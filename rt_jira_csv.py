@@ -94,7 +94,7 @@ def main():
 
                     #Build the output csv
                     for row in csv_reader:
-                        co_name = (row['COMPANY_NAME'])
+                        co_name = (row[str(csv_reader.fieldnames[0])]) #First column for CO NAME.
                         pr = ''
                         bc = 'Yes'
                         if '(PR)' in co_name:
@@ -129,4 +129,3 @@ def main():
         restart()
 
 main()
-
